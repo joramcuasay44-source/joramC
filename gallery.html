@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=1200px">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Joram Bathing Ape Blue Camo Small Business Web</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            overflow-x: hidden;
+        }
+
+        /* ── NAVBAR ── */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #162A42;
+            padding: 0 30px;
+            color: white;
+            width: 100%;
+            height: 75px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .logo { display: flex; align-items: center; }
+        .sho { width: 70px; height: 70px; object-fit: contain; }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .nav-links li { position: relative; }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background 0.3s, transform 0.2s;
+            display: block;
+        }
+
+        .nav-links li a:hover {
+            background-color: #8A8A8A;
+            transform: scale(1.05);
+        }
+
+        /* ── GALLERY WRAPPER ── */
+        .gallery-container {
+            padding: 30px 40px 0;
+        }
+
+        /* ── GALLERY TITLE ── */
+        .gt {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* ── GALLERY ROW ── */
+        .gallery {
+            display: flex;
+            gap: 12px;
+            height: 350px;
+            margin-bottom: 12px;  /* even gap between rows */
+        }
+
+        .gallery img {
+            height: 100%;
+            flex: 1;
+            object-fit: cover;
+            border-radius: 14px;
+            border: 2px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+            transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 0.4s ease,
+                        border-color 0.4s ease;
+            box-shadow: 4px 8px 20px rgba(0,0,0,0.5);
+            min-width: 0;
+        }
+
+        .gallery img:hover {
+            flex: 4;
+            box-shadow: 0 0 30px rgba(77,168,255,0.6),
+                        0 10px 40px rgba(0,0,0,0.7);
+            border-color: rgba(77,168,255,0.5);
+        }
+
+        /* ── FOOTER ── */
+        .galleryf {
+            background: #111;
+            width: 100%;
+            margin-top: 40px;
+            height: 75px;           /* pantay sa navbar */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #111827;
+            color: white;
+            font-size: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: white;
+            color: #000;
+            box-shadow: 0 0 15px #00f6ff;
+            transform: scale(1.1);
+        }
+
+        .aa {
+            color: white;
+            font-size: 13px;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="BAPE Logo" class="sho">
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Product.html">Products ▾</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="gallery-container">
+    <p class="gt">FEATURED LOOKS</p>
+
+    <div class="gallery">
+        <img src="images/a.png" alt="">
+        <img src="images/b.jpg" alt="">
+        <img src="images/c.jpg" alt="">
+        <img src="images/d.png" alt="">
+        <img src="images/e.png" alt="">
+    </div>
+
+    <div class="gallery">
+        <img src="images/one model.jpg" alt="">
+        <img src="images/two model.jpg" alt="">
+        <img src="images/three model.jpg" alt="">
+        <img src="images/four model.jpeg" alt="">
+        <img src="images/five models.png" alt="">
+    </div>
+</div>
+
+<footer class="galleryf">
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p class="aa">This website is for project purposes only</p>
+</footer>
+
+</body>
+</html>

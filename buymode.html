@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=1200px">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Joram Bathing Ape Blue Camo Small Business Web</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+                .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #162A42;
+            padding: 0 30px;
+            color: white;
+            width: 100%;
+            height: 75px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .logo { display: flex; align-items: center; }
+        .sho { width: 75px;
+    height: 75px;
+ object-fit: contain; }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .nav-links li { position: relative; }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background 0.3s, transform 0.2s;
+            display: block;
+        }
+
+        .nav-links li a:hover {
+            background-color: #8A8A8A;
+            transform: scale(1.05);
+        }
+
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #13283f;
+            min-width: 150px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            z-index: 9999;
+            list-style: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 12px 15px;
+            color: white;
+            white-space: nowrap;
+        }
+
+        .dropdown-menu li a:hover { background: #1e3a5f; }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+                .order-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 50px 20px 80px;
+        }
+
+        .jornir {
+            background: #fff;
+            width: 850px;
+            max-width: 95%;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+            outline: 8px solid #13283f;
+            padding: 40px;
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .jornir:hover {
+            transform: scale(1.01);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+        }
+
+               .product-img {
+            flex: 1 1 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .product-img img {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+
+        .kp {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: black;
+            text-align: center;
+            margin-top: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+               .details {
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .price {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #2c5364;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: 700;
+            font-size: 13px;
+            color: #333;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        select, input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: 1.5px solid #ccc;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            transition: border-color 0.3s;
+        }
+
+        select:focus, input:focus {
+            outline: none;
+            border-color: #2c5364;
+        }
+
+               .radio-group {
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .radio-group label {
+            font-weight: 500;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 0;
+            cursor: pointer;
+        }
+
+            .por {
+            margin-top: 25px;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 12px;
+            background: #2c5364;
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .por:hover {
+            background: #162A42;
+            transform: scale(1.02);
+        }
+
+               footer {
+            background: #111;
+            width: 100%;
+            height: 75px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #111827;
+            color: white;
+            font-size: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: white;
+            color: #000;
+            box-shadow: 0 0 15px #00f6ff;
+            transform: scale(1.1);
+        }
+
+        .yy {
+            color: white;
+            font-size: 13px;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="BAPE Logo" class="sho">
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+            <a href="Product.html">Products ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="shoes.html">Shoes</a></li>
+                <li><a href="shirt.html">T-Shirts</a></li>
+                <li><a href="hoodies.html">Hoodies</a></li>
+                <li><a href="caps.html">Caps</a></li>
+                <li><a href="bags.html">Bags</a></li>
+                <li><a href="Pants.html">Pants</a></li>
+                <li><a href="pillows.html">Pillows</a></li>
+                <li><a href="shorts.html">Shorts</a></li>
+                <li><a href="watch.html">Watch</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+
+<div class="order-wrapper">
+    <div class="jornir">
+
+        <!-- Product Image -->
+        <div class="product-img">
+            <img src="images/shoes.png" alt="Shoes">
+            <p class="kp">Shoes</p>
+        </div>
+
+        <!-- Order Details -->
+        <div class="details">
+            <div class="price">₱2000.00</div>
+
+            <label>Select Size:</label>
+            <select>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+
+            <label>Quantity:</label>
+            <input type="number" value="1" min="1">
+
+            <label>Full Name:</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>Address:</label>
+            <input type="text" placeholder="Enter your address">
+
+            <label>Contact Number:</label>
+            <input type="text" placeholder="09XXXXXXXXX">
+
+            <label>Payment Method:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="payment"> Cash on Delivery</label>
+                <label><input type="radio" name="payment"> GCash</label>
+                <label><input type="radio" name="payment"> Credit/Debit Card</label>
+            </div>
+
+            <button class="por">Place Order</button>
+        </div>
+
+    </div>
+</div>
+<footer>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p class="yy">This website is for project purposes only</p>
+</footer>
+
+</body>
+</html>

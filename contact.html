@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=1200px">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Joram Bathing Ape Blue Camo Small Business Web</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            overflow-x: hidden;
+            font-family: 'Montserrat', sans-serif;
+            opacity: 0;
+            animation: smoothLoad 0.6s ease forwards;
+        }
+
+        @keyframes smoothLoad {
+            to { opacity: 1; }
+        }
+
+              .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #162A42;
+            padding: 0 30px;
+            color: white;
+            width: 100%;
+            height: 75px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .logo { display: flex; align-items: center; }
+        .sho { width: 75px; height: 75px; object-fit: contain; }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+        }
+
+        .nav-links li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            transition: background 0.3s, transform 0.2s;
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .nav-links li a:hover {
+            background-color: #8A8A8A;
+            transform: scale(1.05);
+        }
+
+        /* ── HERO SECTION ── */
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 0 9%;
+            color: white;
+        }
+
+        .home-info h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .home-info h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .home-info h2 span {
+            position: relative;
+            display: inline-block;
+            color: transparent;
+            -webkit-text-stroke: 0.7px white;
+            animation: display-text 16s linear infinite;
+            animation-delay: calc(-4s * var(--i));
+        }
+
+        @keyframes display-text {
+            25%, 100% { display: none; }
+        }
+
+        .home-info h2 span::before {
+            content: attr(data-text);
+            position: absolute;
+            width: 0;
+            border-right: 2px solid white;
+            color: white;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: fill-text 4s linear infinite;
+        }
+
+        @keyframes fill-text {
+            10%, 100% { width: 0; }
+            70%, 90% { width: 100%; }
+        }
+
+        .home-info p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        /* ── PROFILE IMAGE ── */
+        .home-img { margin-left: 60px; }
+
+        .home-img .img-box {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .home-img .img-box::before,
+        .home-img .img-box::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: conic-gradient(transparent, transparent, transparent, white);
+            animation: rotate-border 10s linear infinite;
+        }
+
+        .home-img .img-box::after { animation-delay: -5s; }
+
+        @keyframes rotate-border {
+            100% { transform: rotate(360deg); }
+        }
+
+        .home-img .img-box .img-item {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            border-radius: 50%;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .home-img .img-box .img-item img {
+            top: 30px;
+            position: absolute;
+            width: 85%;
+            object-fit: cover;
+            mix-blend-mode: lighten;
+        }
+
+        /* ── ABOUT SECTION ── */
+        .about {
+            padding: 80px 9%;
+        }
+
+        .about h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .about h5 {
+            font-size: 1.2rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .about h5 span { color: #00d4ff; }
+
+        .r {
+            color: white;
+            letter-spacing: 1px;
+            line-height: 1.8;
+            font-size: 15px;
+            background: #1a1a1a;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: left;
+            border: 1px solid #2a2a2a;
+            transition: all 0.3s ease;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .r:hover {
+            transform: translateY(-5px);
+            border-color: #00d4ff;
+            box-shadow: 0 15px 40px rgba(0,212,255,0.15);
+        }
+
+        /* ── SERVICES / CARDS SECTION ── */
+        .services {
+            padding: 60px 9%;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .services-header .title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #1a1a1a;
+            padding: 35px 25px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid #2a2a2a;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #00d4ff;
+            box-shadow: 0 15px 40px rgba(0,212,255,0.15);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0,212,255,0.05), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover::before { opacity: 1; }
+
+        .service-card .icon {
+            font-size: 2.5rem;
+            color: #00d4ff;
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover .icon { transform: scale(1.1); }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: #aaaaaa;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: #111;
+            width: 100%;
+            margin-top: 60px;
+            height: 75px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #111827;
+            color: white;
+            font-size: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: white;
+            color: #000;
+            box-shadow: 0 0 15px #00f6ff;
+            transform: scale(1.1);
+        }
+
+        .yy {
+            color: white;
+            font-size: 13px;
+            text-align: center;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="BAPE Logo" class="sho">
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Product.html">Products ▾</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="home">
+    <div class="home-info">
+        <h1>Francis Joram</h1>
+        <h2>I'm a
+            <span style="--i:4;" data-text="Web Developer">Web Developer</span>
+            <span style="--i:3;" data-text="Blogger">Blogger</span>
+            <span style="--i:2;" data-text="Youtuber">Youtuber</span>
+            <span style="--i:1;" data-text="Designer">Designer</span>
+        </h2>
+        <p>I am a passionate Web Developer who creates modern and responsive websites.</p>
+        <p>I focus on clean design, smooth user experience, and functional systems.</p>
+    </div>
+    <div class="home-img">
+        <div class="img-box">
+            <div class="img-item">
+                <img src="images/m.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT ME -->
+<section class="about">
+    <h3>About Me</h3>
+    <h5>Web <span>Developer</span></h5>
+    <p class="r">I am Francis Joram Ylagan Cuasay, a passionate and dedicated Web Developer who is committed to building modern, responsive, and user-friendly websites and systems. I have a strong interest in web technologies and continuously strive to improve my skills in both front-end and back-end development.
+
+    I specialize in creating clean, organized, and visually appealing designs while ensuring that every website I build is functional, efficient, and easy to navigate. I believe that a great website is not just about appearance, but also about performance, usability, and overall user experience.
+
+    Throughout my learning journey, I have developed knowledge and hands-on experience in HTML, CSS, and system development. I enjoy solving problems, debugging errors, and finding efficient solutions to technical challenges. I am detail-oriented and always aim to produce high-quality outputs in every project I handle.
+
+    As a developer, I value continuous growth and self-improvement. Technology is constantly evolving, and I make it a priority to stay updated with new tools, trends, and best practices in web development. I am open to learning new programming languages and frameworks that can help me expand my capabilities.
+
+    Beyond technical skills, I am hardworking, responsible, and committed to meeting deadlines.</p>
+</section>
+
+<!-- MY SERVICES -->
+<section class="services">
+    <div class="services-header"><h2 class="title">My Services</h2></div>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="icon"><i class="fa-solid fa-paint-roller fa-beat-fade"></i></div>
+            <h3>Web Design</h3>
+            <p>Beautiful, modern designs that capture your brand's essence and engage your audience.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon"><i class="fa-solid fa-code fa-beat-fade"></i></div>
+            <h3>Web Development</h3>
+            <p>Clean, fast, and responsive websites built with modern technologies.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon"><i class="fa-solid fa-paintbrush fa-beat-fade"></i></div>
+            <h3>Graphic Designer</h3>
+            <p>Distinctive visual branding that tells your company's story and helps you stand out.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon"><i class="fa-solid fa-rocket fa-beat-fade"></i></div>
+            <h3>SEO & Performance</h3>
+            <p>Optimize your site for speed and search engines to get more visitors.</p>
+        </div>
+    </div>
+</section>
+
+<!-- MY SKILLS -->
+<section class="services">
+    <div class="services-header"><h2 class="title">My Skills</h2></div>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="icon">
+                <i class="fa-solid fa-c fa-beat-fade"></i>
+                <i class="fa-solid fa-hashtag fa-beat-fade fa-2xs"></i>
+            </div>
+            <h3>C#</h3>
+            <p>I develop simple applications and systems using C#. I focus on clean logic, efficient code structure, and building functional programs.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon"><i class="fa-brands fa-html5 fa-beat-fade"></i></div>
+            <h3>HTML</h3>
+            <p>I create well-structured web pages using HTML, ensuring clean layout and proper organization of website content.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon"><i class="fa-brands fa-css3 fa-beat-fade"></i></div>
+            <h3>CSS</h3>
+            <p>I design modern and responsive layouts using CSS, focusing on good visual style, spacing, and user-friendly interfaces.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon"><i class="fa-brands fa-python fa-beat-fade"></i></div>
+            <h3>Python</h3>
+            <p>I use Python to build basic programs, automate tasks, and explore problem-solving through simple and efficient code.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT INFO -->
+<section class="services">
+    <div class="services-header"><h2 class="title">My Contact Info</h2></div>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="icon"><i class="fa-solid fa-phone fa-beat-fade"></i></div>
+            <h3>Phone</h3>
+            <p>+63 915 751 3984</p>
+        </div>
+        <div class="service-card">
+            <div class="icon"><i class="fa-solid fa-envelope fa-beat-fade"></i></div>
+            <h3>Email</h3>
+            <p>joramcuasay44@gmail.com</p>
+        </div>
+        <div class="service-card">
+            <div class="icon"><i class="fa-solid fa-location-dot fa-beat-fade"></i></div>
+            <h3>Address</h3>
+            <p>San Isidro Bongabong, Oriental Mindoro</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section class="services">
+    <div class="services-header"><h2 class="title">Featured Projects</h2></div>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="icon"><i class="fa-solid fa-boxes-stacked fa-beat-fade"></i></div>
+            <h3>Inventory Management System</h3>
+            <p>System for tracking products, managing stock levels, and organizing inventory efficiently. Built using C# Windows Forms.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon"><i class="fa-solid fa-cart-shopping fa-beat-fade"></i></div>
+            <h3>Ecommerce Website</h3>
+            <p>Online shopping platform where users can browse products, add to cart, and purchase items. Created using HTML, CSS.</p>
+        </div>
+        <div class="service-card">
+            <div class="icon"><i class="fa-solid fa-calculator fa-beat-fade"></i></div>
+            <h3>Calculator</h3>
+            <p>Simple calculator application that performs basic mathematical operations. Built using C# Windows Forms.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p class="yy">This website is for project purposes only</p>
+</footer>
+
+</body>
+</html>
