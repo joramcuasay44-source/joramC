@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 100% 100%;
+    background-position: center;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #162A42;
+    padding: 0 30px;
+    width: 100%;
+    height: 65px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.sho {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.nav-links li {
+    position: relative;
+}
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: background 0.3s, transform 0.2s;
+    display: block;
+    font-size: 14px;
+}
+.nav-links li a:hover {
+    background-color: #8A8A8A;
+    transform: scale(1.05);
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #13283f;
+    min-width: 150px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    z-index: 9999;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    white-space: nowrap;
+    font-size: 13px;
+}
+.dropdown-menu li a:hover {
+    background: #1e3a5f;
+}
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.jornir {
+    background: #fff;
+    width: 90%;
+    max-width: 860px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+    outline: 10px solid #13283f;
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 60px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1;
+}
+.jornir:hover {
+    transform: scale(1.01);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.9);
+}
+.product-img {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.product-img img {
+    width: 100%;
+    max-width: 240px;
+    border-radius: 15px;
+    object-fit: contain;
+}
+.kp {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.details {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+}
+.price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #2c5364;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+label {
+    display: block;
+    margin-top: 14px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+select, input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+.radio-group {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.radio-group label {
+    font-weight: normal;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.radio-group input[type="radio"] {
+    width: auto;
+    margin: 0;
+}
+.por {
+    margin-top: 24px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #2c5364;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+.por:hover {
+    background: #203a43;
+    transform: scale(1.02);
+}
+footer {
+    background: #111;
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: auto;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #111827;
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.social-icons a:hover {
+    background: white;
+    color: #000;
+    box-shadow: 0 0 15px #00f6ff;
+    transform: scale(1.1);
+}
+.yy {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+@media (max-width: 900px) {
+    .jornir {
+        width: 95%;
+        padding: 30px;
+        gap: 30px;
+    }
+    .kp { font-size: 1.3rem; }
+    .price { font-size: 1.3rem; }
+}
+@media (max-width: 650px) {
+    .navbar {
+        padding: 0 15px;
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        padding: 10px 15px;
+    }
+    .nav-links {
+        justify-content: center;
+        gap: 4px;
+    }
+    .nav-links li a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    .jornir {
+        flex-direction: column;
+        padding: 24px;
+        margin: 30px auto;
+        gap: 20px;
+    }
+    .product-img img {
+        max-width: 180px;
+    }
+    .kp { font-size: 1.1rem; }
+    .price { font-size: 1.2rem; }
+    .por { font-size: 15px; padding: 13px; }
+}
+@media (max-width: 400px) {
+    .jornir { padding: 16px; }
+    .product-img img { max-width: 140px; }
+    .kp { font-size: 1rem; }
+    .price { font-size: 1.1rem; }
+}
+@media (min-width: 1280px) {
+    .jornir {
+        max-width: 960px;
+        padding: 50px;
+        gap: 50px;
+    }
+    .product-img img { max-width: 280px; }
+    .kp { font-size: 1.8rem; }
+    .price { font-size: 1.8rem; }
+    .por { font-size: 17px; }
+    footer { padding: 20px 0; }
+    .social-icons a { width: 42px; height: 42px; font-size: 19px; }
+    .yy { font-size: 14px; }
+}
